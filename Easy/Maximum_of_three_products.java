@@ -13,6 +13,7 @@ import java.util.Arrays;
 public class Maximum_of_three_products {
     public int maximumProduct(int[] nums) {
         Arrays.sort(nums);
+        boolean flag = false;
         int n = nums.length;
         int right = nums[n - 1] * nums[n - 2] * nums[n - 3];
         int left = nums[0] * nums[1] * nums[2];
