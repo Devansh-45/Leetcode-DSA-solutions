@@ -5,3 +5,7 @@
     Problem -:
 
 */
+package Easy;
+
+public class Add_an_array_form_of_integer {
+}
