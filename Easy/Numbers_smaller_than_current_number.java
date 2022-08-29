@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class Numbers_smaller_than_current_number {
     public static void main(String[] args) {
-        int[] arr = new int[]{7,7,7,7};
+        int[] arr = new int[]{8,1,1,2,3};
         System.out.println(Arrays.toString(smallerNumbersThanCurrent(arr)));
     }
 //    public static int[] smallerNumbersThanCurrent(int[] nums) {
@@ -28,8 +28,20 @@ public class Numbers_smaller_than_current_number {
 //        }
 //        return ans;
 //    }
+    //Wrong solution
+//    public static int[] smallerNumbersThanCurrent(int[] nums){
+//        int[] counter = nums.clone();
+//             Arrays.sort(counter);
+////        System.out.println(Arrays.toString(nums));
+//        for (int row=1;row< nums.length;row++) {
+//            if (nums[row-1]==nums[row]){
+//                continue;
+//             }
+//           nums[row] = nums[row]- counter[row];
+//          }
+//        return nums;
+//    }
     //Optimal solutions
-
     public static int[] smallerNumbersThanCurrent(int[] nums) {
         int[] cumulative = new int[102];
         for(int i=0;i<nums.length;i++) {
