@@ -3,7 +3,11 @@
     Date -: 19-08-2022
 
     Problem -: Create Target Array in the Given Order
+    Given two arrays of integers nums and index. Your task is to create target array under the following rules:
 
+    Initially target array is empty.
+    From left to right read nums[i] and index[i], insert at index index[i] the value nums[i] in target array.
+    Repeat the previous step until there are no elements to read in nums and index.
 */
 package Easy;
 
@@ -50,7 +54,7 @@ public static int[] createTargetArray(int[] nums, int[] index) {
     for (int i = 0; i < list.size(); i++) {
         ans[i] = list.get(i);
         //If the list 1st Element has value 2 and if we want to insert the element at 1 again then
-        // It will add new element at 1st position and shift the elements by 1 in list
+        // It will add new element at 1st position and shift all the elements by 1 in list
     }
     return ans;
 }

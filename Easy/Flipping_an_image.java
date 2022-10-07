@@ -16,6 +16,8 @@
 */
 package Easy;
 
+import java.util.Arrays;
+
 public class Flipping_an_image {
     public static void main(String[] args) {
         int[][] image = {{1,1,0,0},{1,0,0,1},{0,1,1,1},{1,0,1,0}};
@@ -28,9 +30,10 @@ public class Flipping_an_image {
             start =0;
             int end=image[i].length-1;
             while(start<=end){
-                int temp = image[i][start];
-                image[i][start] = image[i][end] == 1?0 :1;
-                image[i][end] = temp == 1?0 :1;
+                if(image[i][start] == image[i][end]){
+                    image[i][start] = 1 - image[i][start];
+                    image[i][end] =  image[i][start];
+                }
                 start++;
                 end--;
             }

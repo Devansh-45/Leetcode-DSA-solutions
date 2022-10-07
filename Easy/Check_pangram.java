@@ -34,6 +34,7 @@ public static boolean checkIfPangram(String sentence) {
     String Alphas = "abcdefghijklmnopqrstuvwxyz";
     for(int i=0; i<Alphas.length(); i++) {
         if (sentence.indexOf(Alphas.charAt(i)) == -1) {
+            // Check for each and every alphabet
             return false;
         }
     }

@@ -13,11 +13,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Lucky_number_in_matrix {
+public class
+Lucky_number_in_matrix {
     public static void main(String[] args) {
         int[][] matrix = new int[][]{{3,7,8},{9,11,13},{15,16,17}};
+        System.out.println(luckyNumbers(matrix));
     }
-        public List<Integer> luckyNumbers (int[][] matrix) {
+        public static List<Integer> luckyNumbers (int[][] matrix) {
             int numRows = matrix.length;
             int numCols = matrix[0].length;
             int[] rowMin = new int[numRows];

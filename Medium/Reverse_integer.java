@@ -17,17 +17,19 @@ public class Reverse_integer {
     // Using Wrapper class
     public static int reverse(int num) {
 
-        int ans=0,rem=0;
+        int ans=0,rem;
 
         while(num!=0){
             rem=num%10;
-            //i am not sure about this check condition
-
             ans=ans*10+rem;
             if(ans > Integer.MAX_VALUE/10 || ans< Integer.MIN_VALUE/10){
+                // we use max and min value of integer/10 as we will check it before we add the next number
+                // because if we check after reversing all the digit then it will always come in range of int by
+                // producing some garbage value
+                // here we check that while reversing a number if the size of number increases or get decreases
+                // than the range of integer then return 0
                 return 0;
             }
-            //if i place the check condition here ,it doesnt work why
             num=num/10;
         }
         return ans;

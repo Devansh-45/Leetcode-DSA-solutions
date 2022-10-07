@@ -33,7 +33,8 @@ public class Reshape_the_matrix {
                     // Assigning values in reshape_mat
                     col_count++;
                     if (col_count>c-1){
-                        // if the size of col_count increases than the total length then it will increase the row_count
+                        // if the size of col_count increases than the total length of column then it will
+                        // increase the row_count
                         // and reinitialize the col_count
                         row_count++;
                         col_count =0;

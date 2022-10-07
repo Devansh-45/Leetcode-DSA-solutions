@@ -33,28 +33,44 @@ public class Remove_duplication_from_sorted_array {
 //    }
     //Optimal Solution
     public static int removeDuplicates(int[] nums) {
-        int index1=1;
-        int index2=1;
-        int previousNum1=nums[0];
-        while(index2<nums.length){
-            if(previousNum1>=nums[index2]){
-                 index2++;
-                 // This loop will skip the duplicate elements in the array
+        int start=0, end=nums.length, index=1;
+        while(index<end){
+            if(nums[start]==nums[index]){
+                index++;
+                // Checks for identical element in the array and increases the Index to find the new element
             }
-            // Now previousNum1 and nums[index1] will be same so it will first go to else statement
-            else if(previousNum1<nums[index1]){
-                //Now previousNum1 will be assigned to nums[index1] whose value is basically equal to
-                // nums[index2] so after this it will agin check for duplication
-                previousNum1=nums[index1];
-                index1++;
-            }
-            else{
-                // Here as index2 is pointing at position of non-duplicate array so the value of that will be
-                // assigned to nums[index1]
-                nums[index1]=nums[index2];
+            else {
+                nums[++start]=nums[index];
+                // Now as we find out the new element then we assign the new element to the next place of
+                // last unique element
+                index++;
             }
         }
-        return index1;
+        return start+1;
     }
+//    public static int removeDuplicates(int[] nums) {
+//        int index1=1;
+//        int index2=1;
+//        int previousNum1=nums[0];
+//        while(index2<nums.length){
+//            if(previousNum1==nums[index2]){
+//                 index2++;
+//                 // This loop will skip the duplicate elements in the array
+//            }
+//            // Now previousNum1 and nums[index1] will be same so it will first go to else statement
+//            else if(previousNum1<nums[index1]){
+//                //Now previousNum1 will be assigned to nums[index1] whose value is basically equal to
+//                // nums[index2] so after this it will again check for duplication
+//                previousNum1=nums[index1];
+//                index1++;
+//            }
+//            else{
+//                // Here as index2 is pointing at position of non-duplicate array so the value of that will be
+//                // assigned to nums[index1]
+//                nums[index1]=nums[index2];
+//            }
+//        }
+//        return index1;
+//    }
 }
 

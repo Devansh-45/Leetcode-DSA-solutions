@@ -3,6 +3,8 @@
     Date -: 19-08-2022
 
     Problem -:  Number of Good Pairs
+    Given an array of integers nums, return the number of good pairs.
+    A pair (i, j) is called good if nums[i] == nums[j] and i < j.
 
 */
 package Easy;
@@ -22,9 +24,9 @@ public class Number_of_good_pairs {
             arr[num-1]++;
         }
         int ans=0;
-        for(int n : arr){
-            ans += n*(n-1)/2;
-        }
+            for(int n : arr){
+                ans += n*(n-1)/2;
+            }
         return ans;
     }
 

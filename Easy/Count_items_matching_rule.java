@@ -16,11 +16,13 @@ public class Count_items_matching_rule {
     public static void main(String[] args) {
         String[][] arr = {{"phone","blue","pixel"},{"computer","silver","lenovo"},{"phone","gold","iphone"}} ;
         String rulekey = "color",rulevalue="silver";
-//        System.out.println(countMatches(arr,rulekey,rulevalue));
+       // System.out.println(countMatches(arr,rulekey,rulevalue));
     }
     //Optimal Solution
-    public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+    public static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
         int idx=-1,ans=0;
+        // First of all we will check for the rule key and according to that we will mark that the item is present
+        // in which column suppose rulekey = type then it is in first column
         if(ruleKey.equals("color")){
             idx=1;
         }
@@ -31,6 +33,7 @@ public class Count_items_matching_rule {
             idx=2;
         }
         for(int i=0;i<items.size();i++){
+            // Checking every row with the resulted column
             if(items.get(i).get(idx).equals(ruleValue)){
                 ans++;
             }
